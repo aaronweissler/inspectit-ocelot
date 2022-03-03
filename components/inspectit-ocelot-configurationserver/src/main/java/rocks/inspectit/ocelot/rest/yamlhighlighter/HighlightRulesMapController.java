@@ -23,7 +23,6 @@ import java.util.Map;
 @RestController
 public class HighlightRulesMapController extends AbstractBaseController {
 
-
     @VisibleForTesting
     static final String VALUE_TYPE_MAP = "map";
 
@@ -76,6 +75,10 @@ public class HighlightRulesMapController extends AbstractBaseController {
                 return;
             }
 
+            if (currentClass.equals(InspectitConfig.class) && field.getName().equals("env")) {
+                return;
+            }
+
             Map<String, Object> innerMap = new HashMap<>();
 
             if (field.getType().equals(java.util.Map.class)) {
@@ -98,7 +101,7 @@ public class HighlightRulesMapController extends AbstractBaseController {
 
                 innerMap.put(KEY_TYPE, VALUE_TYPE_YAML);
 
-            } else if (field.getType().isEnum()){
+            } else if (field.getType().isEnum()) {
 
                 List<String> enumValues = new ArrayList<>();
                 for (Field enumField : field.getType().getFields()) {
@@ -112,8 +115,8 @@ public class HighlightRulesMapController extends AbstractBaseController {
                 innerMap.put(KEY_TYPE, VALUE_TYPE_OBJECT);
                 innerMap.put(KEY_OBJECT_ATTRIBUTES, generateMap(field.getType()));
 
-            } else if (currentClass.equals(GenericActionSettings.class) &&
-                    (field.getName().equals("value") || field.getName().equals("valueBody"))) {
+            } else if (currentClass.equals(GenericActionSettings.class) && (field.getName()
+                    .equals("value") || field.getName().equals("valueBody"))) {
 
                 innerMap.put(KEY_TYPE, VALUE_TYPE_JAVA);
 
@@ -142,7 +145,7 @@ public class HighlightRulesMapController extends AbstractBaseController {
     @ApiOperation(value = "Get JSON for Highlight Rules Generation", notes = "")
     @GetMapping(value = "highlight-rules", produces = MediaType.APPLICATION_JSON_VALUE)
     public Map<String, Object> getHighlightRulesMap() {
-        return  generateMap(InspectitConfig.class);
+        return generateMap(InspectitConfig.class);
     }
 
 }
