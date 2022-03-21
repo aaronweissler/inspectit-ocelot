@@ -29,7 +29,15 @@ In order to use the agent commands feature, it must first be enabled, as it is d
 See the [Configuration section](configuration/agent-command-configuration.md#configuration) for more information.
 
 Once the feature is enabled, specific agent commands can be triggered via the configuration server.
-The configuration server offers a certain [set of endpoints](https://github.com/inspectIT/inspectit-ocelot/blob/f01ad602a3b188d3be0d17eca22bc4370913b6a1/components/inspectit-ocelot-configurationserver/src/main/java/rocks/inspectit/ocelot/rest/command/AgentCommandController.java) for this purpose. 
+The configuration server offers a certain [set of endpoints](https://github.com/inspectIT/inspectit-ocelot/blob/master/components/inspectit-ocelot-configurationserver/src/main/java/rocks/inspectit/ocelot/rest/command/AgentCommandController.java) for this purpose. 
+
+### Existing Commands
+| Name                 | Description                                                                                                                                                                                         | Endpoint                                                                                  |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| Ping                 | Simple ping command to see if an agent exists and is available.                                                                                                                                     | /api/v1/ping                                                                              |
+| ListClasses          | Requests a list of classes available in the program the agent is attached to. The full class set is filtered using a query. Also provides info about the classes' types and a list of their methods | /api/v1/command/list/classes                                                              |
+| Logs                 | Retrieves logs from an agent. See [Configuration section](configuration/agent-command-configuration.md#configuration)                                                                                                                                                                | /api/v1/logs                                                                              |
+
 
 Once a command has been created, it is ready for the agent to pick up in the configuration server.
 The agent then asks the configuration server at certain intervals whether new commands exist and obtains the commands assigned to it.
