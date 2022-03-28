@@ -95,7 +95,7 @@ jobs:
   # Publish the release artifacts to Github and updates the release
   publish_github_release:
     docker:
-      - image: cibuilds/github:0.12
+      - image: cibuilds/github:0.13
     working_directory: ~/inspectit
     steps:
       - attach_repo
