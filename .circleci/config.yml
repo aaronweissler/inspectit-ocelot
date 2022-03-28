@@ -104,7 +104,7 @@ jobs:
           command: |
             VERSION=${CIRCLE_TAG}
             BODY=test
-            ghr -t "${GITHUB_TOKEN}" -u aaronweissler -r "${CIRCLE_PROJECT_REPONAME}" -c "${CIRCLE_SHA1}" -n "Version ${CIRCLE_TAG}" -b "${BODY}" "${VERSION}" ~/inspectit/artifacts/
+            ghr -t ${GITHUB_TOKEN} -u aaronweissler -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -n "Version ${CIRCLE_TAG}" -b "${BODY}" ${VERSION} ~/inspectit/artifacts/
 
   # Publish docker images
   publish_docker_images:
