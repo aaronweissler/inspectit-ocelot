@@ -60,6 +60,8 @@ jobs:
       - run: cp ~/inspectit/repo/components/inspectit-ocelot-eum-server/build/libs/inspectit-ocelot-eum-server-${CIRCLE_TAG}.jar ~/inspectit/artifacts
       - run: cp ~/inspectit/repo/build/reports/bom.json ~/inspectit/artifacts
       - run: cp ~/inspectit/repo/build/reports/bom.xml ~/inspectit/artifacts
+      - run: cat ~/inspectit/artifacts/bom.json
+      - run: cat ~/inspectit/artifacts/bom.xml
       - run:
           name: Calculate checksums of release artifacts
           working_directory: ~/inspectit/artifacts
