@@ -1,0 +1,41 @@
+name: ConfigDocsGenerator Tests
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  generate-bom:
+    name: Upload BOMs to Dependency Track
+    runs-on: ubuntu-latest
+    container: openjdk:8-jdk
+    steps:
+      - uses: actions/checkout@v2
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Generate BOMs
+        run: gradlew :inspectit-ocelot-core:cyclonedxBom :inspectit-ocelot-configurationserver:cyclonedxBom :inspectit-ocelot-eum-server:cyclonedxBom
+      - name: Upload BOM to Dependency-Track
+        uses: DependencyTrack/gh-upload-sbom@v1.0.0
+        with:
+          serverhostname: '54.74.49.82'
+          apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
+          projectname: 'inspectIT Ocelot Agent'
+          projectversion: 'master'
+          bomfilename: './inspectit-ocelot-agent/build/reports/bom.xml'
+      - name: Upload BOM to Dependency-Track
+        uses: DependencyTrack/gh-upload-sbom@v1.0.0
+        with:
+          serverhostname: '54.74.49.82'
+          apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
+          projectname: 'inspectIT Ocelot Configuration Server'
+          projectversion: 'master'
+          bomfilename: './components/inspectit-ocelot-configurationserver/build/reports/bom.xml'
+      - name: Upload BOM to Dependency-Track
+        uses: DependencyTrack/gh-upload-sbom@v1.0.0
+        with:
+          serverhostname: '54.74.49.82'
+          apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
+          projectname: 'inspectIT Ocelot EUM Server'
+          projectversion: 'master'
+          bomfilename: './components/inspectit-ocelot-eum-server/build/reports/bom.xml'
