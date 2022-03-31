@@ -1,5 +1,5 @@
 ---
-id: version-1.12.2-instrumentation
+id: instrumentation
 title: Instrumentation
 original_id: instrumentation
 ---

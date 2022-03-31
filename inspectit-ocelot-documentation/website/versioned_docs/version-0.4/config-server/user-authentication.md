@@ -1,5 +1,5 @@
 ---
-id: version-0.4-user-authentication
+id: user-authentication
 title: User Authentication
 original_id: user-authentication
 ---

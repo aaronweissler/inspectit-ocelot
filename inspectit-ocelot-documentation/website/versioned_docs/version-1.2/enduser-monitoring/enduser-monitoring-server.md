@@ -1,5 +1,5 @@
 ---
-id: version-1.2-enduser-monitoring-server
+id: enduser-monitoring-server
 title: End User Monitoring with Ocelot
 sidebar_label: Overview
 original_id: enduser-monitoring-server
@@ -11,4 +11,4 @@ For this purpose, [OpenCensus](https://github.com/census-instrumentation/opencen
 
 The EUM server is completely stateless and can be used as a network separation component between the EUM agents and the monitoring backend.
 
-![EUM Server Architecture](assets/eum-architecture.png)
+![EUM Server Architecture](/assets/eum-architecture.png)

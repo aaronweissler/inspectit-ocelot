@@ -1,5 +1,5 @@
 ---
-id: version-1.12.0-installation
+id: installation
 title: Installation
 original_id: installation
 ---

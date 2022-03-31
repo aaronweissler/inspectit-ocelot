@@ -1,5 +1,5 @@
 ---
-id: version-1.3.1-common-tags
+id: common-tags
 title: Common Tags
 original_id: common-tags
 ---

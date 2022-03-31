@@ -1,5 +1,5 @@
 ---
-id: version-1.8.0-install-eum-agent
+id: install-eum-agent
 title: Installing the EUM Agent
 sidebar_label: Install EUM Agent
 original_id: install-eum-agent

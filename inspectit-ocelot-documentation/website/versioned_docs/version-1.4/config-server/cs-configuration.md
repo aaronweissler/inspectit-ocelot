@@ -1,5 +1,5 @@
 ---
-id: version-1.4-cs-configuration
+id: cs-configuration
 title: Server Configuration
 original_id: cs-configuration
 ---

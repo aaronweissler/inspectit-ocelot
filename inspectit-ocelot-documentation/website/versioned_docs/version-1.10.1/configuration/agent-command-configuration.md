@@ -1,5 +1,5 @@
 ---
-id: version-1.10.1-agent-command-configuration
+id: agent-command-configuration
 title: Agent Command Configuration
 sidebar_label: Agent Command Configuration
 original_id: agent-command-configuration

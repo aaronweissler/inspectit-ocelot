@@ -1,5 +1,5 @@
 ---
-id: version-1.8.0-rules
+id: rules
 title: Rules & Actions
 original_id: rules
 ---

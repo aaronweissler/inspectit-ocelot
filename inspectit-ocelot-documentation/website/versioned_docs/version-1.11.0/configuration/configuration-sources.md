@@ -1,5 +1,5 @@
 ---
-id: version-1.11.0-configuration-sources
+id: configuration-sources
 title: Configuration Sources
 original_id: configuration-sources
 ---

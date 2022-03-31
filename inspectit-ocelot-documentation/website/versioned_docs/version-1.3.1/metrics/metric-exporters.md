@@ -1,5 +1,5 @@
 ---
-id: version-1.3.1-metric-exporters
+id: metric-exporters
 title: Metrics Exporters
 original_id: metric-exporters
 ---

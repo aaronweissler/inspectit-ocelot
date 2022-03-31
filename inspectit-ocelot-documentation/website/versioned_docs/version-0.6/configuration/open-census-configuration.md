@@ -1,5 +1,5 @@
 ---
-id: version-0.6-open-census-configuration
+id: open-census-configuration
 title: Using OpenCensus Library with inspectIT Ocelot
 sidebar_label: OpenCensus Configuration
 original_id: open-census-configuration

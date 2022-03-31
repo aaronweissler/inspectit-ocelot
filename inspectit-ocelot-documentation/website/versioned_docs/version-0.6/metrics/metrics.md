@@ -1,5 +1,5 @@
 ---
-id: version-0.6-metrics
+id: metrics
 title: Metrics
 original_id: metrics
 ---

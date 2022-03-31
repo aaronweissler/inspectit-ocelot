@@ -1,5 +1,5 @@
 ---
-id: version-0.6-metric-recorders
+id: metric-recorders
 title: Metrics Recorders
 original_id: metric-recorders
 ---
@@ -25,7 +25,7 @@ By default all polling based recorders use the duration specified by `inspectit.
 of this property is `15s`. Overwriting `inspectit.metrics.frequency` will cause all recorders to use the given
 frequency in case they do not have an explicit frequency in their own configuration.
 
-> **Default metrics settings**<br>
+> **Default metrics settings**<br/>
 > By default, all metrics are captured if they are available on the system. If you do not want certain metrics to be recorded, you need to disable them manually. For example, if you want to disable the `system.average` metric of the `processor` recorder, you need to use the following configuration:
 >```YAML
 >inspectit:

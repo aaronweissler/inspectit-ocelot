@@ -1,5 +1,5 @@
 ---
-id: version-0.4-agent-mappings
+id: agent-mappings
 title: Agent Mappings
 original_id: agent-mappings
 ---

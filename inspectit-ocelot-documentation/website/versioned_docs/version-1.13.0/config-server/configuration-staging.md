@@ -1,5 +1,5 @@
 ---
-id: version-1.13.0-configuration-files-staging
+id: configuration-files-staging
 title: Configuration Files Staging Using Remote Git
 sidebar_label: Configuration Files Staging
 original_id: configuration-files-staging
@@ -29,7 +29,7 @@ For example, a configuration server can be set to only pull files from a remote 
 
 Using the following diagram, the process and the individual steps will be explained in more detail.
 
-![Configuration Files Staging Workflow](assets/staging-workflow.png)
+![Configuration Files Staging Workflow](/assets/staging-workflow.png)
 
 ### Pulling Configuration Files
 
@@ -40,7 +40,7 @@ In order for this to work, a remote Git repository must be configured and the ap
 This can be configured using the `pull-repository` property.
 Please refer to the [Repository Configuration section](#repository-configuration) for more information on how to configure a repository and its branch.
 
-![Configuration Files Staging Workflow](assets/staging-pull.png)
+![Configuration Files Staging Workflow](/assets/staging-pull.png)
 
 When the synchronization process *(1)* is triggered, the configuration server obtains all files that have changed (added, modified, deleted) since the last synchronization and puts them into the local `WORKSPACE` Branch.
 Please note that the **synchronized files overwrite the local files**!
@@ -82,7 +82,7 @@ In order for this to work, a remote Git repository must be configured and the ap
 This can be configured using the `push-repository` property.
 Please refer to the [Repository Configuration section](#repository-configuration) for more information on how to configure a repository and its branch.
 
-![Configuration Files Staging Workflow](assets/staging-push.png)
+![Configuration Files Staging Workflow](/assets/staging-push.png)
 
 If pushing of the configuration files is triggered *(2)*, the configuration server pushes the files to the configured remote Git repository.
 It is important to note that the sending is **forced by default**, but this can be disabled with the `push-repository.use-force-push` option.
@@ -140,7 +140,7 @@ Using the feature that remote Git repositories can be connected to pull and push
 This can be used, if several configuration servers are in use, which receive the respective configuration files of the previous server.
 This is very useful, if e.g. several system stages exist, which used separate configuration servers.
 
-![Configuration Server Chaining using remote Git repository](assets/staging-chain.png)
+![Configuration Server Chaining using remote Git repository](/assets/staging-chain.png)
 
 In order to do this, the configured push and pull branch can be set to the same remote Git repository respectively branch.
 
@@ -155,10 +155,10 @@ All configuration server properties mentioned below refer to being set under the
 | `enabled` | `false` | Whether this feature is enabled and remote Git repositories should be used for configuration management. |
 | `push-at-startup` | `false` | Whether the current live branch should be pushed during startup. |
 | `pull-at-startup` | `false` | Whether the remote source branch should be fetched and merged into the current workspace branch during startup. |
-| <nobr>`initial-configuration-sync`</nobr> | `false` | Defines whether the configuration files of the configuration source repository should be pulled on the initial configuration synchronization. The initial synchronization is not related to the `pull-at-startup` property!<br>[Read the documentation](#initial-synchronization) for detailed information on this property! |
+| <nobr>`initial-configuration-sync`</nobr> | `false` | Defines whether the configuration files of the configuration source repository should be pulled on the initial configuration synchronization. The initial synchronization is not related to the `pull-at-startup` property!<br/>[Read the documentation](#initial-synchronization) for detailed information on this property! |
 | `auto-promotion` | `true` | Whether synchronized files should be promoted automatically, after they have been fetched from the configuration remote. |
-| `pull-repository` | `null` | The remote Git repository which will be used to fetch workspace-configurations from.<br>See [Repository Configuration](#repository-configuration). |
-| `push-repository` | `null` | The remote Git repository which will be used to push live-configurations to.<br>See [Repository Configuration](#repository-configuration). |
+| `pull-repository` | `null` | The remote Git repository which will be used to fetch workspace-configurations from.<br/>See [Repository Configuration](#repository-configuration). |
+| `push-repository` | `null` | The remote Git repository which will be used to push live-configurations to.<br/>See [Repository Configuration](#repository-configuration). |
 
 ### Repository Configuration
 

@@ -1,5 +1,5 @@
 ---
-id: version-0.2-doc1
+id: doc1
 title: Hello World
 original_id: doc1
 ---
@@ -19,7 +19,7 @@ The decision to base the agent on the OpenCensus implementation was made because
 OpenCensus offers multiple [exporters for Java](https://opencensus.io/exporters) (Prometheus, Zipkin, Jaeger, etc) and inspectIT Ocelot supports them all.
 Thus, combining different open source tools you can come to the desired APM solution based on open source software only, as an example [OpenAPM.io](https://openapm.io/landscape?agent=inspectit-ocelot-agent&instrumentation-lib=opencensus&collector=jaeger-collector,zipkin-server,prometheus-server&visualization=jaeger-query,zipkin-server&dashboarding=grafana) landscape shows below:
 
-![Possible landscape with inspectIT Ocelot and other open source tools](assets/inspectit-ocelot-landscape.png)
+![Possible landscape with inspectIT Ocelot and other open source tools](/assets/inspectit-ocelot-landscape.png)
 
 It's important to mention that inspectIT Ocelot seamlessly integrates with the OpenCensus library if it is used in your application.
 The data collected by your manual source code instrumentation will be combined with everything that the agent collects as well.

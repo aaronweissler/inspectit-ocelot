@@ -1,5 +1,5 @@
 ---
-id: version-1.8.0-trace-exporters
+id: trace-exporters
 title: Trace Exporters
 original_id: trace-exporters
 ---

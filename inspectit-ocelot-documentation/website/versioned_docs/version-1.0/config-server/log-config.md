@@ -1,5 +1,5 @@
 ---
-id: version-1.0-log-config
+id: log-config
 title: Server Logging Configuration
 original_id: log-config
 ---

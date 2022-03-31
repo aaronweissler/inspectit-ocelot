@@ -1,5 +1,5 @@
 ---
-id: version-1.3.1-eum-server-configuration
+id: eum-server-configuration
 title: EUM Server and Metrics Configuration
 sidebar_label: Server and Metrics Configuration
 original_id: eum-server-configuration

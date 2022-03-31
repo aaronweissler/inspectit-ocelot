@@ -1,5 +1,5 @@
 ---
-id: version-0.6-scopes
+id: scopes
 title: Scopes
 original_id: scopes
 ---

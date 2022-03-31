@@ -1,5 +1,5 @@
 ---
-id: version-1.15.0-syntax-highlighting
+id: syntax-highlighting
 title: YAML Editor Syntax Highlighting
 original_id: syntax-highlighting
 ---
@@ -16,11 +16,11 @@ The *inspectIT Configuration Server* uses a custom Mode for [Syntax Highlighting
 
 | Examples of Syntax Highlighting      |   |
 |--------------------------------------|---|
-| Illegal keys / with typo             | ![Example of illegal field](assets/highlighting-example-wrongkey.png)  |
-| Predetermined and freely chosen keys | ![Example of predetermined vs freely chosen field](assets/highlighting-example-chosenpredetermined-keys.png)  |
-| Enum fields                          | ![Example of enum field](assets/highlighting-example-enums.png)  |
-| Java before                          | ![Example of Java code with old highlighting](assets/highlighting-example-java-before.png)  |
-| Java now                             | ![Example of Java code with new highlighting](assets/highlighting-example-java-after.png)  |
+| Illegal keys / with typo             | ![Example of illegal field](/assets/highlighting-example-wrongkey.png)  |
+| Predetermined and freely chosen keys | ![Example of predetermined vs freely chosen field](/assets/highlighting-example-chosenpredetermined-keys.png)  |
+| Enum fields                          | ![Example of enum field](/assets/highlighting-example-enums.png)  |
+| Java before                          | ![Example of Java code with old highlighting](/assets/highlighting-example-java-before.png)  |
+| Java now                             | ![Example of Java code with new highlighting](/assets/highlighting-example-java-after.png)  |
 
 ## Guidelines
 
@@ -34,7 +34,7 @@ This happens because to make the Syntax Highlighting possible some rules needed 
 
 | Examples for guidelines      |                                                                                                |
 |------------------------------|------------------------------------------------------------------------------------------------|
-| Wrong indentation in general | ![Example of wrong indentation](assets/highlighting-example-wrongindentation.png)              |
-| Wrong indentation in List    | ![Example of wrong indentation in List](assets/highlighting-example-wrongindentation-list.png) |
-| Too big JSON objects         | ![Example of wrong usage of JSON object](assets/highlighting-example-JSONwrong.png)                                                                                               |
-| Quotation marks around key   | ![Example of wrong quotation marks around key](assets/highlighting-example-quotationmarkswrong.png)                                                                                              |
+| Wrong indentation in general | ![Example of wrong indentation](/assets/highlighting-example-wrongindentation.png)              |
+| Wrong indentation in List    | ![Example of wrong indentation in List](/assets/highlighting-example-wrongindentation-list.png) |
+| Too big JSON objects         | ![Example of wrong usage of JSON object](/assets/highlighting-example-JSONwrong.png)                                                                                               |
+| Quotation marks around key   | ![Example of wrong quotation marks around key](/assets/highlighting-example-quotationmarkswrong.png)                                                                                              |

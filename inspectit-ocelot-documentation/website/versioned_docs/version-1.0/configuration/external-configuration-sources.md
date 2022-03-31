@@ -1,5 +1,5 @@
 ---
-id: version-1.0-external-configuration-sources
+id: external-configuration-sources
 title: External Configuration Sources
 sidebar_label: External Configuration Sources
 original_id: external-configuration-sources

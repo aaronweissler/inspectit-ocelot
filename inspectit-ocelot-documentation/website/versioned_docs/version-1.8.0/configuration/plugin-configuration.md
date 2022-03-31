@@ -1,5 +1,5 @@
 ---
-id: version-1.8.0-plugin-configuration
+id: plugin-configuration
 title: Plugin Configuration
 original_id: plugin-configuration
 ---

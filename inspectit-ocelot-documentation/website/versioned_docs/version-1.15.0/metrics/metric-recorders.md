@@ -1,5 +1,5 @@
 ---
-id: version-1.15.0-metric-recorders
+id: metric-recorders
 title: Metrics Recorders
 original_id: metric-recorders
 ---

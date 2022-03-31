@@ -1,5 +1,5 @@
 ---
-id: version-1.4-managing-configurations
+id: managing-configurations
 title: Managing Configuration Files
 original_id: managing-configurations
 ---
@@ -14,7 +14,7 @@ It is possible for agents to obtain the configurations exclusively from the `LIV
 
 In order to deliver specific configurations to agents, so-called "agent mappings" can be used. These can be used to define precisely which files and from which branch an agent should receive.
 
-![Configuration Server Workspace Architecture](assets/configuration-server-branches.png)
+![Configuration Server Workspace Architecture](/assets/configuration-server-branches.png)
 
 ## Promoting Configuration Files
 
@@ -29,7 +29,7 @@ It is important to note that only whole files and not individual changes can be 
 
 In the following screenshot, the configuration server's promotion user interface is shown. It can be used to review, approve and promote configurations. Only users who have promotion rights can approve and promote configuration files.
 
-![Configuration Server's promotion UI](assets/configuration-server-promotion-ui.png)
+![Configuration Server's promotion UI](/assets/configuration-server-promotion-ui.png)
 
 1. The promotion UI can be access via the navigation sidebar.
 2. The UI shows a list of all files which have been changed on the `WORKSPACE` branch, thus, differ from the `LIVE` branch. The icons show whether a file has been newly created, edited or deleted. Approved files that will be promoted to the `LIVE` branch are highlighted in green with a check mark.

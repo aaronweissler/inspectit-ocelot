@@ -1,5 +1,5 @@
 ---
-id: version-1.3.1-custom-metrics
+id: custom-metrics
 title: Custom Metrics
 original_id: custom-metrics
 ---

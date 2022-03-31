@@ -1,5 +1,5 @@
 ---
-id: version-0.2-logging-configuration
+id: logging-configuration
 title: Logging Configuration
 original_id: logging-configuration
 ---

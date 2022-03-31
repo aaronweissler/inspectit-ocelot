@@ -1,5 +1,5 @@
 ---
-id: version-1.3.1-tracing
+id: tracing
 title: Tracing
 original_id: tracing
 ---

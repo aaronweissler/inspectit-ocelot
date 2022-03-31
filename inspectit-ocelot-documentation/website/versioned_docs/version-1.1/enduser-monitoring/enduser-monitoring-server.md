@@ -1,5 +1,5 @@
 ---
-id: version-1.1-enduser-monitoring-server
+id: enduser-monitoring-server
 title: End User Monitoring Server
 sidebar_label: EUM Server
 original_id: enduser-monitoring-server

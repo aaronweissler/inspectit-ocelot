@@ -1,5 +1,5 @@
 ---
-id: version-1.2-eum-server-setup
+id: eum-server-setup
 title: Setup the EUM Server
 sidebar_label: Server Setup
 original_id: eum-server-setup

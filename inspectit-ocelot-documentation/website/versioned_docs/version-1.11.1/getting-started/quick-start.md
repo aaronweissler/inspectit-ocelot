@@ -1,5 +1,5 @@
 ---
-id: version-1.11.1-quick-start
+id: quick-start
 title: Quick Start
 original_id: quick-start
 ---

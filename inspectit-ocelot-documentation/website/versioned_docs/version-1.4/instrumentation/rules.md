@@ -1,5 +1,5 @@
 ---
-id: version-1.4-rules
+id: rules
 title: Rules
 original_id: rules
 ---

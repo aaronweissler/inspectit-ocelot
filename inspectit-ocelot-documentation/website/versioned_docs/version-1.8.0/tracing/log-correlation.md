@@ -1,5 +1,5 @@
 ---
-id: version-1.8.0-log-correlation
+id: log-correlation
 title: Log Correlation
 original_id: log-correlation
 ---

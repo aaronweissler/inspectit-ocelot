@@ -1,5 +1,5 @@
 ---
-id: version-1.3.1-privacy
+id: privacy
 title: Data Privacy
 original_id: privacy
 ---

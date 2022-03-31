@@ -1,5 +1,5 @@
 ---
-id: version-1.8.0-enduser-monitoring-server
+id: enduser-monitoring-server
 title: End User Monitoring with Ocelot
 sidebar_label: Overview
 original_id: enduser-monitoring-server
@@ -8,7 +8,7 @@ original_id: enduser-monitoring-server
 The inspectIT Ocelot EUM Server can be used to collect EUM data.
 The EUM server is completely stateless and can be used as a network separation component between the EUM agents and the monitoring backend.
 
-![EUM Server Architecture](assets/eum-architecture.png)
+![EUM Server Architecture](/assets/eum-architecture.png)
 
 # Collecting metrics
 

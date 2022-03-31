@@ -1,5 +1,5 @@
 ---
-id: version-0.2-special-sensors
+id: special-sensors
 title: Special Sensors
 original_id: special-sensors
 ---

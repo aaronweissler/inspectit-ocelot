@@ -1,5 +1,5 @@
 ---
-id: version-0.2-self-monitoring
+id: self-monitoring
 title: Self-Monitoring
 original_id: self-monitoring
 ---

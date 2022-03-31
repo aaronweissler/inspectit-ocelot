@@ -1,5 +1,5 @@
 ---
-id: version-1.3.1-process
+id: process
 title: Instrumentation Process
 original_id: process
 ---
