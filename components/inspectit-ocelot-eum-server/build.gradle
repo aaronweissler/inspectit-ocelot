@@ -161,7 +161,7 @@ task copyServerJar(type: Copy) {
 }
 
 docker {
-    name "inspectit/inspectit-ocelot-eum-server"
+    name "aaronweikru/inspectit-ocelot-eum-server"
     tags "${version}"
     dockerfile file('docker/Dockerfile')
     files 'docker/entrypoint.sh', "$buildDir/docker-jar/inspectit-ocelot-eum-server.jar"
