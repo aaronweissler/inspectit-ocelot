@@ -223,5 +223,3 @@ workflows:
       - publish_docker_images:
           filters:
             <<: *filter_release
-          requires:
-            - publish_github_release
