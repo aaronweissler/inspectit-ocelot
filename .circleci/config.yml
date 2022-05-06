@@ -220,27 +220,6 @@ workflows:
             <<: *filter_release
           requires:
             - requesting-release-build
-      - deploy-release-documentation:
-          filters:
-            <<: *filter_release
-          requires:
-            - checkout
-      - build_release_artifacts:
-          filters:
-            <<: *filter_release
-          requires:
-            - checkout
-      - generate_changelog:
-          filters:
-            <<: *filter_release
-          requires:
-            - checkout
-      - publish_github_release:
-          filters:
-            <<: *filter_release
-          requires:
-            - build_release_artifacts
-            - generate_changelog
       - publish_docker_images:
           filters:
             <<: *filter_release
