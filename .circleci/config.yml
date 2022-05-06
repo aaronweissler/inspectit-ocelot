@@ -120,6 +120,7 @@ jobs:
       - attach_repo
       - setup_remote_docker:
           version: 20.10.12
+      - run: docker buildx create --use
       - run: cd repo && ./gradlew dockerTag -PbuildVersion=${CIRCLE_TAG}
       - run: |
           docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
