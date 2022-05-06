@@ -1,6 +1,6 @@
 plugins {
     id 'org.springframework.boot' version "${springboot_version}"
-    id 'com.palantir.docker' version "0.21.0"
+    id 'com.palantir.docker' version "0.33.0"
     id "org.cyclonedx.bom" version "1.5.0"
 }
 
@@ -163,6 +163,8 @@ task copyServerJar(type: Copy) {
 docker {
     name "inspectit/inspectit-ocelot-eum-server"
     tags "${version}"
+    buildx true
+    platform "linux/amd64", "linux/arm64"
     dockerfile file('docker/Dockerfile')
     files 'docker/entrypoint.sh', "$buildDir/docker-jar/inspectit-ocelot-eum-server.jar"
 }

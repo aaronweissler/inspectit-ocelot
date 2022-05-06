@@ -1,7 +1,7 @@
 plugins {
     id "me.champeau.gradle.jmh" version "0.5.3"
     id 'maven-publish'
-    id 'com.palantir.docker' version "0.21.0"
+    id 'com.palantir.docker' version "0.33.0"
 }
 
 evaluationDependsOn(':inspectit-ocelot-bootstrap')
@@ -52,6 +52,8 @@ docker {
     name "inspectit/inspectit-ocelot-agent"
     tags "${version}"
     dockerfile file('docker/Dockerfile')
+    buildx true
+    platform "linux/amd64", "linux/arm64"
     files 'docker/entrypoint.sh', "$buildDir/inspectit-ocelot-agent.jar"
 }
 
@@ -116,10 +118,10 @@ dependencies {
     systemTestImplementation(
             "io.opencensus:opencensus-testing:${openCensusVersion}",
             "io.opencensus:opencensus-api:${openCensusVersion}",
-            
+
             'org.junit.jupiter:junit-jupiter-engine:5.3.1',
             'org.junit.jupiter:junit-jupiter-api:5.3.1',
-            
+
             'org.assertj:assertj-core:3.11.1',
             'org.awaitility:awaitility:3.1.5',
             "com.github.tomakehurst:wiremock:2.25.1",
@@ -127,7 +129,7 @@ dependencies {
             'org.apache.httpcomponents:httpclient:4.5.6',
             'org.eclipse.jetty:jetty-server:9.4.3.v20170317',
             'org.eclipse.jetty:jetty-servlet:9.4.3.v20170317',
-            
+
             'com.h2database:h2:1.4.199',
 
             // only used for log-correlation tests
