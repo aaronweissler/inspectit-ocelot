@@ -1,0 +1,60 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - /\d+\.\d+(\..+)?/
+
+jobs:
+
+  # do we need/want to run tests again? Might be annoying with the randomly failing ones
+  #agent-test:
+  #  uses: ./.github/workflows/agent_test.yml
+#
+  #configdocsgenerator-test:
+  #  uses: ./.github/workflows/configdocsgenerator_test.yml
+#
+  #configurationserver_test:
+  #  uses: ./.github/workflows/configurationserver_test.yml
+#
+  #configuration_ui_test:
+  #  uses: ./.github/workflows/configuration_ui_test.yml
+
+  build_and_release:
+    name: 'Build release artifacts'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Create Software-Bills-Of-Materials
+        run: |
+          ./gradlew assemble bootJarWithFrontend :inspectit-ocelot-core:cyclonedxBom :inspectit-ocelot-configurationserver:cyclonedxBom -PbuildVersion=${CIRCLE_TAG}
+          mkdir artifacts
+          cp ./inspectit-ocelot-agent/build/inspectit-ocelot-agent-${CIRCLE_TAG}.jar ./artifacts
+          cp ./components/inspectit-ocelot-configurationserver/build/libs/inspectit-ocelot-configurationserver-${CIRCLE_TAG}.jar ./artifacts
+          mkdir boms
+          cp ./inspectit-ocelot-core/build/reports/bom.json ./boms/inspectit-ocelot-agent-bom.json
+          cp ./inspectit-ocelot-core/build/reports/bom.xml ./boms/inspectit-ocelot-agent-bom.xml
+          cp ./components/inspectit-ocelot-configurationserver/build/reports/bom.json ./boms/inspectit-ocelot-configurationserver-bom.json
+          cp ./components/inspectit-ocelot-configurationserver/build/reports/bom.xml ./boms/inspectit-ocelot-configurationserver-bom.xml
+          zip -r ./artifacts/software-bill-of-materials.zip ./boms
+      - name: Calculate checksums of release artifacts
+        working-directory: ./artifacts
+        run: for f in *; do sha256sum "$f" >> inspectit-ocelot-sha256-checksums.txt; done
+      - name: "Build Changelog"
+        id: build_changelog
+        uses: mikepenz/release-changelog-builder-action@v3.1.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.event.inputs.boomerang-version }}
+          files: .artifacts/*
+          body: ${{steps.github_release.outputs.changelog}}
+
+  #build_and_publish_docker_images:
+
+  #deploy-release-documentation:
