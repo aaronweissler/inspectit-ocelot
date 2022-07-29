@@ -21,7 +21,7 @@ jobs:
   #  uses: ./.github/workflows/configuration_ui_test.yml
 
   build_and_release:
-    name: 'Build release artifacts'
+    name: 'Build and Release'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
