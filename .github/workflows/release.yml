@@ -43,6 +43,8 @@ jobs:
       - name: Calculate checksums of release artifacts
         working-directory: ./artifacts
         run: for f in *; do sha256sum "$f" >> inspectit-ocelot-sha256-checksums.txt; done
+      - name: test Artifacts
+        run: ls -la artifacts
       - name: "Build Changelog"
         id: build_changelog
         uses: mikepenz/release-changelog-builder-action@v3.1.1
