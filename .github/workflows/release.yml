@@ -31,10 +31,10 @@ jobs:
         run: chmod +x gradlew
       - name: Build artifacts
         run: |
-          ./gradlew assemble bootJarWithFrontend :inspectit-ocelot-core:cyclonedxBom :inspectit-ocelot-configurationserver:cyclonedxBom -PbuildVersion=${{ github.ref_name}}
+          ./gradlew assemble bootJarWithFrontend :inspectit-ocelot-core:cyclonedxBom :inspectit-ocelot-configurationserver:cyclonedxBom -PbuildVersion=${{ github.ref_name }}
           mkdir artifacts
-          cp ./inspectit-ocelot-agent/build/inspectit-ocelot-agent-${{ github.ref_name}}.jar ./artifacts
-          cp ./components/inspectit-ocelot-configurationserver/build/libs/inspectit-ocelot-configurationserver-${{ github.ref_name}}.jar ./artifacts
+          cp ./inspectit-ocelot-agent/build/inspectit-ocelot-agent-${{ github.ref_name }}.jar ./artifacts
+          cp ./components/inspectit-ocelot-configurationserver/build/libs/inspectit-ocelot-configurationserver-${{ github.ref_name }}.jar ./artifacts
           mkdir boms
           cp ./inspectit-ocelot-core/build/reports/bom.json ./boms/inspectit-ocelot-agent-bom.json
           cp ./inspectit-ocelot-core/build/reports/bom.xml ./boms/inspectit-ocelot-agent-bom.xml
@@ -50,7 +50,7 @@ jobs:
           tag_name: ${{ github.event.inputs.boomerang-version }}
           files: artifacts/*
           generate_release_notes: true
-          name: Version ${{ github.ref_name}}
+          name: Version ${{ github.ref_name }}
           body: "You can also find the corresponding documentation online under the following link: [inspectIT Ocelot Documentation](http://docs.inspectit.rocks)"
 
 
@@ -64,13 +64,13 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Build Docker Images
-        run: ./gradlew dockerTag -PbuildVersion=${{ github.ref_name}}
+        run: ./gradlew dockerTag -PbuildVersion=${{ github.ref_name }}
       - name: Push Docker Images
         run: |
           docker login -u ${{ secrets.DOCKER_HUB_USER }} -p  ${{ secrets.DOCKER_HUB_PASSWORD }}
-          docker push inspectit/inspectit-ocelot-agent:${{ github.ref_name}}
+          docker push inspectit/inspectit-ocelot-agent:${{ github.ref_name }}
           docker push inspectit/inspectit-ocelot-agent:latest
-          docker push inspectit/inspectit-ocelot-configurationserver:${{ github.ref_name}}
+          docker push inspectit/inspectit-ocelot-configurationserver:${{ github.ref_name }}
           docker push inspectit/inspectit-ocelot-configurationserver:latest
 
   deploy_release_documentation:
