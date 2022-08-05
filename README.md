@@ -7,6 +7,8 @@
 [![Java Agent Tests](https://github.com/inspectIT/inspectit-ocelot/workflows/Java%20Agent%20Tests/badge.svg?branch=master)](https://github.com/inspectIT/inspectit-ocelot/actions?query=workflow%3A"Java+Agent+Tests")
 [![Configuration Server Tests](https://github.com/inspectIT/inspectit-ocelot/workflows/Configuration%20Server%20Tests/badge.svg?branch=master)](https://github.com/inspectIT/inspectit-ocelot/actions?query=workflow%3A"Configuration+Server+Tests")
 
+### Test more release notes
+
 [inspectIT Ocelot](https://inspectit.rocks/) is a zero-configuration Java agent for dynamically collecting application performance,
  tracing and behavior data based on the [OpenCensus library](https://opencensus.io/).
 Despite the zero-configuration capability, it provides a powerful configuration feature
