@@ -13,12 +13,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16.x
-      - name: Deploying to GitHub Pages
-        working-directory: ./inspectit-ocelot-documentation/website
-        run: |
-          npm install && GIT_USER=NTTechnicalUser CUSTOM_COMMIT_MESSAGE="[skip ci] Updated master documentation." npm run publish-gh-pages
-
+      #- name: Use Node.js 16.x
+      #  uses: actions/setup-node@v2
+      #  with:
+      #    node-version: 16.x
+      #- name: Deploying to GitHub Pages
+      #  working-directory: ./inspectit-ocelot-documentation/website
+      #  run: |
+      #    npm install && GIT_USER=NTTechnicalUser CUSTOM_COMMIT_MESSAGE="[skip ci] Updated master documentation." npm run publish-gh-pages
+#
