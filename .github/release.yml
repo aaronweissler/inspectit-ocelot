@@ -9,10 +9,10 @@ changelog:
     - title: Breaking Changes 🛠
       labels:
         - breaking-change
-    - title: Implemented Enhancements
+    - title: New Features 🎉
       labels:
         - enhancement
-    - title: Fixed Bugs
+    - title: Bugfixes
       labels:
         - bug
     - title: Other Changes
