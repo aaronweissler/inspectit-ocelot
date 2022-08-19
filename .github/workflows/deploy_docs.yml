@@ -1,9 +1,12 @@
-name: Deploy Pre-Release Documentation
+name: Deploy Documentation
 
 on:
   push:
     branches:
       - master
+    paths:
+      - inspectit-ocelot-documentation
+  workflow_call:
 
 jobs:
 
