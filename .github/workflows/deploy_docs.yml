@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - inspectit-ocelot-documentation
+      - inspectit-ocelot-documentation/**
   workflow_call:
 
 jobs:
