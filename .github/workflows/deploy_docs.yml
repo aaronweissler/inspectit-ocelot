@@ -39,8 +39,3 @@ jobs:
           publish_dir: ./inspectit-ocelot-documentation/website/build/inspectit-ocelot
           user_name: NTTechnicalUser
           user_email: NTTechnicalUser@users.noreply.github.com
-     # - name: Deploying to GitHub Pages
-     #   working-directory: ./inspectit-ocelot-documentation/website
-     #   run: |
-     #     npm install && GIT_USER=NTTechnicalUser CUSTOM_COMMIT_MESSAGE="[skip ci] Updated master documentation." npm run publish-gh-pages
-
