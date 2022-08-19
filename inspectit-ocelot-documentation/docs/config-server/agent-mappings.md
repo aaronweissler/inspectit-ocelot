@@ -2,7 +2,7 @@
 id: agent-mappings
 title: Agent Mappings
 ---
-
+test
 Agent mappings are used to determine which agent receives which configuration. Here, individual files or specific folders can be defined, which serve as the basis for the resulting configuration. Furthermore, you can specify which branch (`WORKSPACE` or `LIVE`) the mapping should use to obtain the configuration files.
 
 It's important to note that the first matching agent mapping will be used to determine which configuration is shipped to an agent.
