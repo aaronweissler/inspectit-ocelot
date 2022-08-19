@@ -52,10 +52,11 @@ task copyAgent(type: Copy) {
 docker {
     dependsOn copyAgent
 
-    name "inspectit/inspectit-ocelot-agent"
+    name "aaronweikru/inspectit-ocelot-agent"
     tags "${version}"
     dockerfile file('docker/Dockerfile')
     files 'docker/entrypoint.sh', "$buildDir/inspectit-ocelot-agent.jar"
+    buildx true
 }
 
 task buildOpenTelemetryFatJar(type: Jar){

@@ -162,9 +162,10 @@ task copyServerJar(type: Copy) {
 }
 
 docker {
-    name "inspectit/inspectit-ocelot-configurationserver"
+    name "aaronweikru/inspectit-ocelot-configurationserver"
     tags "${version}"
     dockerfile file('docker/Dockerfile')
     files 'docker/entrypoint.sh', "$buildDir/docker-jar/inspectit-ocelot-configurationserver.jar"
+    buildx true
 }
 docker.dependsOn copyServerJar
