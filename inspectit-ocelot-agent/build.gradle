@@ -1,7 +1,7 @@
 plugins {
     id "me.champeau.gradle.jmh" version "0.5.3"
     id 'maven-publish'
-    id 'com.palantir.docker' version "0.21.0"
+    id 'com.palantir.docker' version "0.34.0"
 }
 
 evaluationDependsOn(':inspectit-ocelot-bootstrap')
@@ -57,6 +57,7 @@ docker {
     dockerfile file('docker/Dockerfile')
     files 'docker/entrypoint.sh', "$buildDir/inspectit-ocelot-agent.jar"
     buildx true
+    platform 'linux/amd64', 'linux/arm64', 'linux/arm/v7'
 }
 
 task buildOpenTelemetryFatJar(type: Jar){
