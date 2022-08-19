@@ -1,9 +1,9 @@
 name: Configuration Server Tests
 
 on:
-  push:
-    branches:
-      - master
+  #push:
+  #  branches:
+  #    - master
   pull_request:
     paths:
       - '.github/workflows/configurationserver_test.yml'

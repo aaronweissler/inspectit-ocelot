@@ -40,9 +40,9 @@ dependencies {
 
 
     )
-    buildTools(
-            'jarcheck:jarcheck:1.5'
-    )
+    //buildTools(
+    //        'jarcheck:jarcheck:1.5'
+    //)
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
     implementation(
@@ -207,7 +207,7 @@ cyclonedxBom {
     includeConfigs += ["runtimeClasspath"]
 }
 
-jar.dependsOn checkDependencyJavaVersions
+//jar.dependsOn checkDependencyJavaVersions
 jar.dependsOn generateVersionFile
 
 jar {

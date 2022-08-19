@@ -1,13 +1,16 @@
 ![inspectIT Ocelot ](https://inspectit.github.io/inspectit-ocelot/images/inspectit-ocelot.png)
 
-# inspectIT Ocelot 
+## Test Release Notes
 
 Tested docs deployments
-
+# inspectIT Ocelot 
+## with new bugfixes
 [![Release](https://jitpack.io/v/inspectit/inspectit-ocelot.svg)](https://jitpack.io/#inspectit/inspectit-ocelot)
 [![Code Coverage](https://codecov.io/gh/inspectit/inspectit-ocelot/branch/master/graph/badge.svg)](https://codecov.io/gh/inspectIT/inspectit-ocelot)
 [![Java Agent Tests](https://github.com/inspectIT/inspectit-ocelot/workflows/Java%20Agent%20Tests/badge.svg?branch=master)](https://github.com/inspectIT/inspectit-ocelot/actions?query=workflow%3A"Java+Agent+Tests")
 [![Configuration Server Tests](https://github.com/inspectIT/inspectit-ocelot/workflows/Configuration%20Server%20Tests/badge.svg?branch=master)](https://github.com/inspectIT/inspectit-ocelot/actions?query=workflow%3A"Configuration+Server+Tests")
+
+### Test more release notes
 
 [inspectIT Ocelot](https://inspectit.rocks/) is a zero-configuration Java agent for dynamically collecting application performance,
  tracing and behavior data based on the [OpenCensus library](https://opencensus.io/).
