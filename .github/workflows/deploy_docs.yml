@@ -1,17 +1,16 @@
 name: Deploy Documentation
 
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - inspectit-ocelot-documentation/**
   workflow_call:
+    inputs:
+      commit-message:
+        required: true
+        type: string
 
 jobs:
 
-  deploy-master-documentation:
-    name: 'Deploy Pre-Release Documentation'
+  deploy_documentation:
+    name: 'Deploy Documentation'
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -30,7 +29,6 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build website
         run: yarn build
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -39,3 +37,4 @@ jobs:
           publish_dir: ./inspectit-ocelot-documentation/website/build/inspectit-ocelot
           user_name: NTTechnicalUser
           user_email: NTTechnicalUser@users.noreply.github.com
+          commit_message: ${{ github.event.inputs.commit-message }}

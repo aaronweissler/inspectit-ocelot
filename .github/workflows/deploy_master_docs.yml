@@ -1,0 +1,16 @@
+name: Deploy Master Documentation
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - inspectit-ocelot-documentation/**
+
+jobs:
+
+  deploy_master_documentation:
+    name: "Publish Master Documentation"
+    uses: ./.github/workflows/deploy_docs.yml
+    with:
+      commit-message: Updated master documentation
