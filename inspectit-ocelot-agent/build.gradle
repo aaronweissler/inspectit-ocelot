@@ -53,11 +53,9 @@ docker {
     dependsOn copyAgent
 
     name "aaronweikru/inspectit-ocelot-agent"
-    tag 'latest', "hub.docker.com/${name}:latest"
-    tag 'versioned', "my.registry.com/${name}:${version}"
+    tag 'versioned', "hub.docker.com/${name}:${version}"
     dockerfile file('docker/Dockerfile')
     files 'docker/entrypoint.sh', "$buildDir/inspectit-ocelot-agent.jar"
-    platform 'linux/amd64', 'linux/arm64', 'linux/arm/v7'
 }
 
 task buildOpenTelemetryFatJar(type: Jar){
