@@ -56,7 +56,6 @@ docker {
     tags "${version}"
     dockerfile file('docker/Dockerfile')
     files 'docker/entrypoint.sh', "$buildDir/inspectit-ocelot-agent.jar"
-    buildx true
     platform 'linux/amd64', 'linux/arm64', 'linux/arm/v7'
 }
 
