@@ -23,7 +23,7 @@ jobs:
     name: 'Build and Release'
     runs-on: ubuntu-latest
     environment: release
-    needs: [agent_test, configdocsgenerator_test, configurationserver_test, configuration_ui_test]
+    #needs: [agent_test, configdocsgenerator_test, configurationserver_test, configuration_ui_test]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
