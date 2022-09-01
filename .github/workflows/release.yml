@@ -7,17 +7,17 @@ on:
 
 jobs:
 
-  agent_test:
-    uses: ./.github/workflows/agent_test.yml
-
-  configdocsgenerator_test:
-    uses: ./.github/workflows/configdocsgenerator_test.yml
-
-  configurationserver_test:
-    uses: ./.github/workflows/configurationserver_test.yml
-
-  configuration_ui_test:
-    uses: ./.github/workflows/configuration_ui_test.yml
+  #agent_test:
+  #  uses: ./.github/workflows/agent_test.yml
+#
+  #configdocsgenerator_test:
+  #  uses: ./.github/workflows/configdocsgenerator_test.yml
+#
+  #configurationserver_test:
+  #  uses: ./.github/workflows/configurationserver_test.yml
+#
+  #configuration_ui_test:
+  #  uses: ./.github/workflows/configuration_ui_test.yml
 
   build_and_release:
     name: 'Build and Release'
