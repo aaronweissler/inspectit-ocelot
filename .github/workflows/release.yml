@@ -49,7 +49,7 @@ jobs:
         with:
           tag_name: ${{ github.event.inputs.boomerang-version }}
           files: artifacts/*
-          generate_release_notes: false
+          generate_release_notes: true
           name: Version ${{ github.ref_name }}
           body: "You can also find the corresponding documentation online under the following link: [inspectIT Ocelot Documentation](http://docs.inspectit.rocks)"
 
