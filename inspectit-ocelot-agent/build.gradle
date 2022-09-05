@@ -1,7 +1,7 @@
 plugins {
     id "me.champeau.gradle.jmh" version "0.5.3"
     id 'maven-publish'
-    id 'com.palantir.docker' version "0.21.0"
+    id 'com.palantir.docker' version "0.34.0"
 }
 
 evaluationDependsOn(':inspectit-ocelot-bootstrap')
@@ -52,8 +52,8 @@ task copyAgent(type: Copy) {
 docker {
     dependsOn copyAgent
 
-    name "inspectit/inspectit-ocelot-agent"
-    tags "${version}"
+    name "aaronweikru/inspectit-ocelot-agent"
+    tag 'versioned', "hub.docker.com/${name}:${version}"
     dockerfile file('docker/Dockerfile')
     files 'docker/entrypoint.sh', "$buildDir/inspectit-ocelot-agent.jar"
 }
